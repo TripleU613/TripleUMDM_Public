@@ -1,5 +1,5 @@
 
-# 📱 TripleU MDM (v2.4)
+# 📱 TripleU MDM (Version Changes Often)
 
 **Simple, strict, and offline Android MDM** – no accounts, no setup, no nonsense.
 
