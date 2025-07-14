@@ -33,9 +33,9 @@ This MDM app is focused on simplicity and control. Here's what it can do:
 
 This app is intentionally minimal. It does **not** include advanced enterprise-grade features such as:
 
-* WebView management
-* Accessibility service control
-* Restrictions for WhatsApp status, Telegram search, etc.
+* ~~WebView management~~
+* ~~Accessibility service control~~
+* Restrictions for ~~WhatsApp status~~, Telegram search, etc.
 * Other advanced eGate-style features
 
 ---
