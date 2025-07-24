@@ -42,7 +42,7 @@ This app is intentionally minimal. It does **not** include advanced enterprise-g
 
 ## 🔧 Installation (via ADB)
 
-Run the following commands to set up the app as a Device Owner:
+Run the following commands to set up the app as a Device Owner (**note the new command**):
 
 ```bash
 adb shell dpm set-device-owner com.tripleu.mdm/com.tripleu.mdm.helper.DeviceAdminReceiver
