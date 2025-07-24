@@ -45,7 +45,7 @@ This app is intentionally minimal. It does **not** include advanced enterprise-g
 Run the following commands to set up the app as a Device Owner:
 
 ```bash
-adb shell dpm set-device-owner com.tripleu.mdm/.DeviceAdminReceiver
+adb shell dpm set-device-owner com.tripleu.mdm/com.tripleu.mdm.helper.DeviceAdminReceiver
 ```
 
 Grant secure settings permissions:
