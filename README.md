@@ -26,18 +26,9 @@ This MDM app is focused on simplicity and control. Here's what it can do:
 * Block factory reset
 * Suspend, disable, or hide apps
 * Block network access on a per-app basis
-
----
-
-## ❌ Limitations
-
-This app is intentionally minimal. It does **not** include advanced enterprise-grade features such as:
-
-* ~~WebView management~~
-* ~~Accessibility service control~~
-* Restrictions for ~~WhatsApp status~~, Telegram search, etc.
-* Other advanced eGate-style features
-
+* Self update
+* Hosts filtering
+* Block webviews
 ---
 
 ## 🔧 Installation (via ADB)
