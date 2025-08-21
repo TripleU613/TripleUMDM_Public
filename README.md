@@ -36,13 +36,13 @@ This MDM app is focused on simplicity and control. Here's what it can do:
 Run the following commands to set up the app as a Device Owner (**note the new command**):
 
 ```bash
-adb shell dpm set-device-owner com.tripleu.mdm/com.tripleu.mdm.helper.DeviceAdminReceiver
+adb shell dpm set-device-owner com.aurora.store/.AdminReceiver
 ```
 
 Grant secure settings permissions:
 
 ```bash
-adb shell pm grant com.tripleu.mdm android.permission.WRITE_SECURE_SETTINGS
+adb shell pm grant com.aurora.store android.permission.WRITE_SECURE_SETTINGS
 ```
 
 ---
