@@ -2,7 +2,6 @@
 
 # Privacy Policy for TripleUMDM
 
-**Effective Date:** \[Insert Date]
 **Contact:** [tripleuworld@gmail.com](mailto:tripleuworld@gmail.com)
 **Website:** [https://tripleu.org](https://tripleu.org)
 
