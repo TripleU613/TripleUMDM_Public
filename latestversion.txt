@@ -1,2 +1,2 @@
-versioncode: "37"
-apk link: "https://pub-587c8a0ce03148689a821b1655d304f5.r2.dev/TripleUMDM.apk"
+versioncode: "38"
+apk link: "https://pub-587c8a0ce03148689a821b1655d304f5.r2.dev/app-release.apk"
