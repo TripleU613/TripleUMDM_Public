@@ -70,7 +70,7 @@ Abuse prevention: if our systems detect suspicious activity (too many duplicate 
 
    ```bash
    adb shell dpm set-device-owner "com.tripleu.mdm/.a"
-   adb shell pm grant com.tripleu android.permission.WRITE_SECURE_SETTINGS
+   adb shell pm grant com.tripleu.mdm android.permission.WRITE_SECURE_SETTINGS
    ```
 3. Or use our [automatic installer](https://installer.jtechforums.org) directly from your computer browser.
 
