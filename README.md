@@ -1,8 +1,28 @@
-
-
-# TripleU MDM v3.7
+# TripleU MDM v3.7 → v3.8
 
 **TripleU MDM** is a simple, powerful, all-in-one Mobile Device Management (MDM) solution designed to give our community safe, secure, and responsible technology.
+
+---
+
+## 🚀 What’s New in v3.8
+
+* Added Safe Mode protection
+* Added root self-grant support
+* Removed unnecessary permission prompts
+* Fully translated app (includes Hebrew switch)
+* Added call blocking and video blocking
+* Fixed crashes after enabling restrictions
+* Fixed Google sign-in blocked by WebView filter
+* Fixed and refined WhatsApp Channels/Status blocking
+* Added version codename in Settings
+* Allowed longer PINs (no 8-digit limit)
+* Added whitelist domains GUI
+* Added daily “Fact of the Day”
+* Updated Google APIs for locked-out users
+* Rebuilt UI using Jetpack Compose
+* Many performance and stability fixes
+
+*Stable, cleaner, and more powerful than ever.*
 
 ---
 
@@ -88,6 +108,6 @@ Abuse prevention: if our systems detect suspicious activity (too many duplicate 
 
 ## 🙏 Contributing & Support
 
-* We thank the few contributors and donors who have supported us so far.
-* If you’d like to help grow this project, please consider donating or partnering with us.
+* Thanks to all contributors and donors who keep this project alive.
+* Want to help? Donate or partner with us.
 * Contact: [tripleu.org](https://tripleu.org)
