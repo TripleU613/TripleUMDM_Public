@@ -1,10 +1,17 @@
 # TripleU MDM v3.7 → v3.8
 
+[**▶ Install Online**](https://installer.jtechforums.org) • [**Latest Guide**](#-user-guide-v38) • [**Issues**](https://jtechforums.org) • [**Website**](https://tripleu.org)
+
+> **TL;DR**: v3.8 is faster, stricter, fully translated (Hebrew toggle), with Safe Mode protection, refined WhatsApp controls, and a Compose UI overhaul.
+
 **TripleU MDM** is a simple, powerful, all-in-one Mobile Device Management (MDM) solution designed to give our community safe, secure, and responsible technology.
 
 ---
 
 ## 🚀 What’s New in v3.8
+
+<details>
+<summary><b>Changelog (tap to expand)</b></summary>
 
 * Added Safe Mode protection
 * Added root self-grant support
@@ -21,6 +28,8 @@
 * Updated Google APIs for locked-out users
 * Rebuilt UI using Jetpack Compose
 * Many performance and stability fixes
+
+</details>
 
 *Stable, cleaner, and more powerful than ever.*
 
@@ -96,18 +105,80 @@ Abuse prevention: if our systems detect suspicious activity (too many duplicate 
 
 ---
 
-## 📌 Notes
+## 📘 User Guide (v3.8)
 
-* Versions prior to **3.7** are archived and no longer supported.
-* Future plans include:
+Everything you need to set up and manage TripleU MDM:
 
-  * Online MDM management.
-  * Full content-filtering VPN.
+<details>
+<summary><b>Open the step‑by‑step guide</b></summary>
+
+### Step 1 – Welcome
+
+When opening **TripleU MDM** for the first time, agree to the *Terms of Use*.
+
+<details><summary>📷 Image</summary><p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803482593-step-one.png" width="400"/></p></details>
+
+### Step 2 – Sign In or Reset PIN
+
+Sign in with your existing account or reset your PIN if forgotten.
+
+<details><summary>📷 Images</summary><p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803530990-screenshot_20251110_001735.png" width="400"/></p><p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803540773-screenshot_20251110_001758.png" width="400"/></p></details>
+
+### Step 3 – Create an Account
+
+Fill in your *email*, *password*, and *PIN code* (used for login). Check your email for a verification link.
+
+<details><summary>📷 Image</summary><p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803561319-screenshot_20251110_001751.png" width="400"/></p></details>
+
+### Step 4 – Grant Permissions
+
+Grant permissions with **ADB** or use the online installer.
+
+```bash
+adb shell dpm set-device-owner "com.tripleu.mdm/.a"
+adb shell pm grant com.tripleu.mdm android.permission.WRITE_SECURE_SETTINGS
+```
+
+<details><summary>📷 Image</summary><p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803601172-screenshot_20251110_001929.png" width="400"/></p></details>
+
+### Step 5 – Enter the App
+
+Enter your **PIN** (not password) and access the dashboard with daily facts and tips.
+
+<details><summary>📷 Image</summary><p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803639576-screenshot_20251110_002136.png" width="400"/></p></details>
+
+### Step 6 – Sidebar Overview
+
+Control system, installation, accessibility, and network features.
+
+<details><summary>📷 Image</summary><p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803675090-screenshot_20251110_002121.png" width="400"/></p></details>
+
+### Step 7 – Updates
+
+Manage app updates directly; mute problematic apps if needed.
+
+<details><summary>📷 Image</summary><p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803919711-screenshot_20251110_002049.png" width="400"/></p></details>
+
+### Step 8 – Apps Tab
+
+Select multiple apps, apply policies, block WebView, or set apps offline.
+
+<details><summary>📷 Image</summary><p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803955844-screenshot_20251110_002004.png" width="400"/></p></details>
+
+### Step 9 – Settings Tab
+
+Switch language, import whitelists, manage muted apps, reset PIN, or uninstall.
+
+<details><summary>📷 Image</summary><p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762804003309-screenshot_20251110_001954.png" width="400"/></p></details>
+
+</details>
 
 ---
 
-## 🙏 Contributing & Support
+## Notes & Support
 
-* Thanks to all contributors and donors who keep this project alive.
-* Want to help? Donate or partner with us.
-* Contact: [tripleu.org](https://tripleu.org)
+Report bugs on [jtechforums.org](https://jtechforums.org) or get direct help at [tripleu.org](https://tripleu.org).
+
+If you want to translate or improve this guide, post your version in the forum thread and tag me.
+
+**Enjoy and good luck!**
