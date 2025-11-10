@@ -1,242 +1,194 @@
-Hi everyone!
-Since I feel that **TripleUMDM**, even though it’s built with a nice UI and UX, is still pretty hard for newcomers to use, I decided to write a guide on how to get started. Hope you all enjoy!
+# TripleU MDM v3.8 – User Guide
+
+This guide is formatted for **guide.md** on GitHub with all screenshots hidden under expandable “Image” sections for a cleaner layout.
 
 ---
 
-## Step 1: Welcome
+## Step 1 – Welcome
+
+Welcome to **TripleU MDM**! When you open the app for the first time, you’ll be asked to agree to the *Terms of Use*.
+
+Please read and agree to continue — basically, it means you’re agreeing to use the app responsibly (**and don’t sue us 😉 just kidding**).
 
 <details>
-<summary>Tap to expand</summary>
-
-<img width="480" height="854" alt="Screenshot_20250912_114849" src="https://github.com/user-attachments/assets/8871bf6f-249a-410e-bd1e-5a4d09290546" />
-
+<summary>📷 Image</summary>
+<p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803482593-step-one.png" width="400"/></p>
 </details>
-
-Since this app is an **MDM**, and I have no time for lawsuits, there’s a welcome page for a **privacy agreement**.
-Note: clicking on *“I agree to the privacy policy”* will take you directly to the agreement and the repository.
 
 ---
 
-## Step 2a: Create Account
+## Step 2 – Sign In or Reset PIN
+
+On this screen you can **sign in to your existing account** or **reset your PIN** if you’ve forgotten it.
+
+If you already have an account, enter your email and PIN, then press **Sign In**.
+
+If you forgot your PIN – tap **Reset PIN**, enter your email, and you’ll receive a **recovery link**.
 
 <details>
-<summary>Tap to expand</summary>
-
-<img width="480" height="854" alt="Screenshot_20250912_115002" src="https://github.com/user-attachments/assets/9fb82235-a5d6-4695-871d-f9806cf7faeb" />
-
+<summary>📷 Images</summary>
+<p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803530990-screenshot_20251110_001735.png" width="400"/></p>
+<p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803540773-screenshot_20251110_001758.png" width="400"/></p>
 </details>
-
-Because the app can be remotely managed, and we don’t want to risk losing control of the MDM, there’s a **sign-in page**.
-This will eventually be used with a **customer login portal**, where an admin will control a child or supervised device remotely.
-
-Fill out:
-
-* **Name** (doesn’t have to be real)
-* **Phone number** (use your real one in case we need to contact you)
-* **Password** (for your account)
-* **PIN** (for logging into the app)
-
-Why both password and PIN?
-Because if you manage multiple users, each can have their own PIN — which you can share without exposing your main password.
-
-After creating an account, you’ll receive an **email confirmation link**.
-Check your spam folder if it doesn’t arrive.
 
 ---
 
-## Step 2b: Sign In
+## Step 3 – Create an Account
+
+Here you can **create a new account**. Fill in your *email*, *password*, and *PIN code*.
+
+The PIN is your **main access code** — you’ll need it every time you log in. Make sure to remember it!
+
+After filling in all fields, press **Register** to complete setup.
 
 <details>
-<summary>Tap to expand</summary>
-
-<img width="480" height="854" alt="Screenshot_20250912_114936" src="https://github.com/user-attachments/assets/82a82baf-5604-44d2-962a-418a53be3efa" />
-
+<summary>📷 Image</summary>
+<p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803561319-screenshot_20251110_001751.png" width="400"/></p>
 </details>
 
-If you already have an account, simply sign in.
-The **PIN** can differ, but the **password** must match your account.
+After registration, you’ll get a **verification email**. It might land in your **Spam** folder — check there if you don’t see it.
+
+Inside the email is a **verification link** you must click. Once verified, go back to the app and tap **“I verified”** to continue.
+
+⚠️ Note: *Firebase* announced that this verification service might be discontinued in the future, so occasional errors may occur — for now, it works fine.
 
 ---
 
-## Step 3: Permissions
+## Step 4 – Grant Permissions
 
-<details>
-<summary>Tap to expand</summary>
-
-<img width="480" height="854" alt="Screenshot_20250912_115058" src="https://github.com/user-attachments/assets/49ae3002-7ca0-4ba5-9e66-5a889193dd44" />
-
-</details>
-
-The first permissions required are **DPM** and **WRITE\_SECURE\_SETTINGS**.
-You can:
-
-* Grant them via PC,
-* Use the online installer, or
-* Do it with root using:
+You’ll need to grant the app the required permissions. Usually, only **ADB commands** are needed:
 
 ```bash
 adb shell dpm set-device-owner "com.tripleu.mdm/.a"
 adb shell pm grant com.tripleu.mdm android.permission.WRITE_SECURE_SETTINGS
 ```
 
-On **OnePlus devices**, enable **“Disable permission monitoring”** in Developer Options.
+You can also use the online installer: [installer.jtechforums.org](https://installer.jtechforums.org)
 
-Once granted, continue with the rest. If any permission fails, close the app and reopen — the prompt should disappear.
+If you get an error, you may need to **temporarily disable apps that hold accounts** (like *com.google.android.gms*), run the command, then re-enable them.
 
-<details>
-<summary>Tap to expand</summary>
-
-<img width="480" height="854" alt="Screenshot_20250912_115218" src="https://github.com/user-attachments/assets/84e5dc62-3479-431a-8296-6aebdf8d924a" />
-
-</details>
-
-After all permissions are set: **enter the app.**
-
----
-
-## Step 4: Knowing the Options
+On Android 14+, a **device restart** may be required. If you see a warning about Google services after reboot — don’t worry, everything’s fine.
 
 <details>
-<summary>Tap to expand</summary>
-
-<img width="480" height="854" alt="Screenshot_20250912_115324" src="https://github.com/user-attachments/assets/3f0c924a-329b-4bfe-a74d-05a7b5770b92" />
-
+<summary>📷 Image</summary>
+<p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803601172-screenshot_20251110_001929.png" width="400"/></p>
 </details>
-
-There are 4 categories:
-
-1. **Network**
-2. **Accessibility**
-3. **Apps and Install**
-4. **System**
 
 ---
 
-### Network
+## Step 5 – Enter the App
+
+After granting permissions, tap **Enter**. You may see the PIN screen again — enter your **PIN code** (not your account password).
 
 <details>
-<summary>Tap to expand</summary>
-
-<img width="480" height="854" alt="Screenshot_20250912_115342" src="https://github.com/user-attachments/assets/bae06d88-188b-455a-8ebf-90fc668805df" />
-<img width="480" height="854" alt="Screenshot_20250912_115444" src="https://github.com/user-attachments/assets/5c24805c-f2e4-4ce3-a778-a8693946e312" />
-<img width="480" height="854" alt="Screenshot_20250912_115842" src="https://github.com/user-attachments/assets/30aa1a05-1f30-40d2-9e96-dcd320413bff" />
-<img width="480" height="854" alt="Screenshot_20250912_115819" src="https://github.com/user-attachments/assets/c0eb21e1-8e62-468b-a364-fd5a7ef446e6" />
-<img width="480" height="854" alt="Screenshot_20250912_115825" src="https://github.com/user-attachments/assets/bed52683-5689-401c-a4c1-ff882211906d" />
-
+<summary>📷 Image</summary>
+<p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803630243-screenshot_20251110_002307.png" width="400"/></p>
 </details>
 
-* Disable hotspot and tethering.
-* Disable all network access (**warning**: we won’t be able to connect remotely; if you lose your password, you’re locked out).
-* Enable Private DNS (if you click **Save** without typing anything, it defaults to `all.dns.mullvad.net`).
-* VPN/Firewall: enables making apps offline in **App Management**.
-* Whitelist domains: lets you import a whitelist file. (**Note**: this disables DNS filter as they conflict.)
-
-**Example:** Amazon works, but YouTube (not whitelisted) shows *DNS bad config* — meaning blocked.
-**Note:** Apps using direct IP connections or raw sockets may still partially work, but DNS-reliant ones will fail.
-
----
-
-### Accessibility
+Once logged in, you’ll reach the dashboard — it’s mainly visual, showing **daily facts**, **tips**, and **notices**, but no user action is required.
 
 <details>
-<summary>Tap to expand</summary>
-
-<img width="480" height="854" alt="Screenshot_20250912_115403" src="https://github.com/user-attachments/assets/0a0271ea-1cd4-4bf0-a2a5-f59decd96737" />
-<img width="480" height="854" alt="Screenshot_20250912_115521" src="https://github.com/user-attachments/assets/039574ba-e7b7-4c87-bfbc-8113b1896f7c" />
-<img width="480" height="854" alt="Screenshot_20250912_115540" src="https://github.com/user-attachments/assets/508d9b3c-bd10-4fdc-a7c5-14e1b208891e" />
-
+<summary>📷 Image</summary>
+<p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803639576-screenshot_20251110_002136.png" width="400"/></p>
 </details>
-
-* Android Auto fix: Google QuickSearchBox and Google Maps won’t function directly but Android Auto works fine.
-* Block WhatsApp updates (includes channels).
-* Block in-app AI (Meta in WhatsApp, Gemini in Google Messages).
-* Block Gboard GIF search (only search; scrolling still works).
-* Block all in-app browsers (unless WebView exceptions are set in **App Management**).
 
 ---
 
-### Apps and Install
+## Step 6 – Sidebar
+
+### 🛠️ System
+
+* Block adding new users
+* Disable factory reset (FRP)
+* Block developer options
+* Prevent access to app settings
+* Block phone calls and SMS
 
 <details>
-<summary>Tap to expand</summary>
-
-<img width="480" height="854" alt="Screenshot_20250912_115417" src="https://github.com/user-attachments/assets/7db8a7d9-26d9-4dbc-b26f-fc0499508d14" />
-
+<summary>📷 Image</summary>
+<p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803675090-screenshot_20251110_002121.png" width="400"/></p>
 </details>
 
-* Disable APK installation (blocks all install sources).
-* Block new apps detection (new apps are blocked until unblocked in **App Management**).
-* Block Play Store (hides it entirely).
+### 📦 Installation
 
----
-
-### System
-
-* Disallow adding users.
-* Disable factory reset (forces FRP, may brick if reset from recovery — good or bad depending on use).
-* Block Developer Options.
-* Disable App Settings (prevents editing in Settings → Apps).
-* Disable SMS and MMS.
-
----
-
-### Settings Page
+* **Disable APK Install** – blocks new app installs.
+* **Block New Apps** – allows updates but prevents new installs.
+* **Allow User Updates** – gives shortcut to update screen from lockscreen.
+* **Block Play Store** – quickly disables Google Play.
 
 <details>
-<summary>Tap to expand</summary>
-
-<img width="480" height="854" alt="Screenshot_20250912_115510" src="https://github.com/user-attachments/assets/42231e7a-0ac3-4236-a3dd-5cb27be50463" />
-
+<summary>📷 Image</summary>
+<p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803695241-screenshot_20251110_002115.png" width="400"/></p>
 </details>
 
-Includes:
+### ♿ Accessibility
 
-* Reset MDM PIN (not account password)
-* Import whitelist
-* Privacy policy
-* Account info (shows your email)
-* Support us (donation link)
-* Uninstall (removes the MDM)
-
----
-
-### App Management
+* **Android Auto Quirk** – prevents Maps or QuickSearchBox launch but keeps them functional.
+* **Block WhatsApp Tabs** – hides Channels, Status, and Updates tabs.
+* **Block In-App AI** – disables Gemini, Meta AI, and other built-in AIs.
+* **Block In-App Browsers** – detects and prevents embedded browsers.
 
 <details>
-<summary>Tap to expand</summary>
-
-<img width="480" height="854" alt="Screenshot_20250912_115620" src="https://github.com/user-attachments/assets/c3410a9c-4bb9-414f-b01c-73cf24a5afc3" />
-<img width="480" height="854" alt="Screenshot_20250912_115540" src="https://github.com/user-attachments/assets/137c356f-49c8-4af2-8258-430775b33a17" />
-<img width="480" height="854" alt="Screenshot_20250912_115620" src="https://github.com/user-attachments/assets/3be21712-4087-4444-af96-78128dfd3206" />
-
+<summary>📷 Image</summary>
+<p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803716929-screenshot_20251110_002107.png" width="400"/></p>
 </details>
 
-Tap an app for options, or long-press to select multiple. After selecting, press **Done**.
+### 🌐 Network
 
-Options available (depending on settings):
+* **Block Hotspot** – prevents hotspot/tethering.
+* **Block All Traffic** – cuts all internet access (no updates possible!).
+* **Enable Private DNS** – default: `all.dns.mullvad.net` (blocks social media).
+* **Enable Firewall VPN** – manage offline/online app access.
+* **Whitelist Domains** – allow access only to approved sites.
 
-* Hide
-* Suspend
-* Disable (hide+suspend)
-* Block network (make offline)
-* WebView block/exception
-* Block uninstall (persistent)
-
-Applied settings appear in the **Managed tab**, with color coding.
-
----
-
-## That’s the Guide for Now
-
-* We can remotely uninstall the app for you (minimal fee + ownership verification).
-* Accounts used commercially may be suspended.
-* Everything here was made by **TripleU**. My purpose is to **expand kedusha** in the community. Staying safe from the internet shouldn’t cost money — so please respect this and **do not charge** for installation.
+<details>
+<summary>📷 Image</summary>
+<p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803737884-screenshot_20251110_002057.png" width="400"/></p>
+</details>
 
 ---
 
-## Contact
+## Step 7 – Updates
 
-For custom versions, cooperation, or anything similar, visit [tripleu.org](https://tripleu.org).
+The update screen lets you update apps directly. If an update fails, it’s usually due to signature mismatch (e.g., *APKPure* versions). You can **mute** an app and later unmute it from settings.
 
-Love y’all,
-**TripleU aka, Usher Weiss**
+<details>
+<summary>📷 Image</summary>
+<p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803919711-screenshot_20251110_002049.png" width="400"/></p>
+</details>
+
+---
+
+## Step 8 – Apps Tab
+
+Here you can **select multiple apps**, **apply policies**, **block WebView**, or **set apps offline** via the VPN feature.
+
+<details>
+<summary>📷 Image</summary>
+<p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803955844-screenshot_20251110_002004.png" width="400"/></p>
+</details>
+
+---
+
+## Step 9 – Settings Tab
+
+* **Switch to Hebrew** – switch interface language
+* **Import Whitelist** – import a text file of allowed domains
+* **Privacy / Support** – access privacy policy and support
+* **Muted Apps** – manage muted apps
+* **Reset PIN / Uninstall** – reset MDM PIN or uninstall app
+
+<details>
+<summary>📷 Image</summary>
+<p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762804003309-screenshot_20251110_001954.png" width="400"/></p>
+</details>
+
+---
+
+## Notes & Support
+
+Report bugs on [jtechforums.org](https://jtechforums.org) or get direct help at [tripleu.org](https://tripleu.org).
+
+If you want to translate or improve this guide, post your version in the forum thread and tag me.
+
+**Enjoy and good luck!**
