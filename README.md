@@ -1,31 +1,41 @@
-<img src="https://github.com/user-attachments/assets/c4311169-c8f1-4bdc-ab3f-80db811c064b" width="450" alt="TripleU MDM banner" />
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c4311169-c8f1-4bdc-ab3f-80db811c064b" width="450" alt="TripleU MDM banner" />
+</p>
 
 # TripleU MDM
 
-Welcome to the public release repository for TripleU MDM.
+This repository contains the **public release** of TripleU MDM, including installation info and links to support and community discussions.
 
-## Quick links
+## Links
 
-- Website installer: https://mdm.tripleu.org
-- MDM dashboard (console): https://mdm.tripleu.org/login
-- Comments and feedback: https://forums.jtechforums.org/t/regarding-upcoming-tripleumdm-v4-0/5535?u=tripleu
-- Questions for the Israeli community: https://mitmachim.top/topic/87888
-- Technical support: https://tripleu.org (contact)
-- Donations: https://tripleu.org (multiple payment methods)
+- **Installer (web):** https://mdm.tripleu.org  
+- **Dashboard / console:** https://mdm.tripleu.org/login  
+- **Feedback thread (JTech Forums):** https://forums.jtechforums.org/t/regarding-upcoming-tripleumdm-v4-0/5535?u=tripleu  
+- **Israeli community Q&A (Mitmachim):** https://mitmachim.top/topic/87888  
+- **Support / contact:** https://tripleu.org  
+- **Donations:** https://tripleu.org  
 
-Want to write a guide or improve the docs? Open a PR to this repository.
-Issues: https://github.com/TripleU613/TripleUMDM_Public/issues (or mention them on either forum).
+## Contributing / feedback
+
+Documentation improvements and guides are welcome — feel free to open a PR.
+
+For bugs and feature requests, use GitHub Issues:  
+https://github.com/TripleU613/TripleUMDM_Public/issues  
+(You can also post in either community thread above.)
 
 ## Manual install (ADB)
 
-If the website installer does not work, run:
+If the web installer doesn’t work, you can set the device owner manually:
 
 ```bash
 adb shell dpm set-device-owner "com.tripleu.mdm/.a"
 adb shell pm grant com.tripleu.mdm android.permission.WRITE_SECURE_SETTINGS
-```
+````
 
 ## Usage
 
-This MDM is for private use only. Commercial users can receive discounts by contacting us at https://tripleu.org.
+TripleU MDM is intended for **private use**.
+Commercial use is available by request — contact us at [https://tripleu.org](https://tripleu.org) for pricing and discounts.
+
+
