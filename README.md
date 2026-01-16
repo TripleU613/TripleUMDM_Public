@@ -3,27 +3,18 @@
 
 # TripleU MDM
 
-Welcome to the public release repo for TripleU MDM.
+Welcome to the public release repository for TripleU MDM.
 
-Install with the website installer:
-https://mdm.tripleu.org
+## Quick links
 
-Access your MDM dashboard (console):
-https://mdm.tripleu.org/login
+- Website installer: https://mdm.tripleu.org
+- MDM dashboard (console): https://mdm.tripleu.org/login
+- Comments and feedback: https://forums.jtechforums.org/t/regarding-upcoming-tripleumdm-v4-0/5535?u=tripleu
+- Questions for the Israeli community: https://mitmachim.top/topic/87888
+- Technical support: https://tripleu.org (contact)
+- Donations: https://tripleu.org (multiple payment methods)
 
-Comments and feedback:
-https://forums.jtechforums.org/t/regarding-upcoming-tripleumdm-v4-0/5535?u=tripleu
-
-Questions for the Israeli community:
-https://mitmachim.top/topic/87888
-
-Technical support:
-https://tripleu.org (contact)
-
-Donations:
-https://tripleu.org (multiple payment methods)
-
-Want to write a guide or improve the docs? Open a PR to this repo.
+Want to write a guide or improve the docs? Open a PR to this repository.
 Issues: https://github.com/TripleU613/TripleUMDM_Public/issues (or mention them on either forum).
 
 ## Manual install (ADB)
@@ -37,4 +28,4 @@ adb shell pm grant com.tripleu.mdm android.permission.WRITE_SECURE_SETTINGS
 
 ## Usage
 
-This MDM is for private use only. Commercial use can receive discounts by contacting us at https://tripleu.org.
+This MDM is for private use only. Commercial users can receive discounts by contacting us at https://tripleu.org.
