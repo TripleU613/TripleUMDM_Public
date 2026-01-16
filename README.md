@@ -1,4 +1,4 @@
-<img width="900" height="512" alt="Untitled design" src="https://github.com/user-attachments/assets/c4311169-c8f1-4bdc-ab3f-80db811c064b" />
+<img src="https://github.com/user-attachments/assets/c4311169-c8f1-4bdc-ab3f-80db811c064b" width="450" alt="TripleU MDM banner" />
 
 
 # TripleU MDM
