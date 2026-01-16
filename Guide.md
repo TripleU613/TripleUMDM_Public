@@ -1,198 +1,194 @@
-# TripleU MDM 4.0 - User Guide
+# TripleU MDM v3.8 – User Guide
 
-This guide covers installation, enrollment, and daily use. Screenshots are collapsed under Image sections to keep the page clean. The UI may vary slightly by version.
-
----
-
-## Before You Start
-
-- Prepare a computer for the installer or ADB.
-- Enable Developer Options and USB Debugging on the device.
-- Have access to the email address you will use for login.
+This guide is formatted for **guide.md** on GitHub with all screenshots hidden under expandable “Image” sections for a cleaner layout.
 
 ---
 
-## Step 1 - Welcome
+## Step 1 – Welcome
 
-Open the app and accept the Terms of Use.
+Welcome to **TripleU MDM**! When you open the app for the first time, you’ll be asked to agree to the *Terms of Use*.
+
+Please read and agree to continue — basically, it means you’re agreeing to use the app responsibly (**and don’t sue us 😉 just kidding**).
 
 <details>
-<summary>Image</summary>
+<summary>📷 Image</summary>
 <p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803482593-step-one.png" width="400"/></p>
 </details>
 
 ---
 
-## Step 2 - Sign In or Reset PIN
+## Step 2 – Sign In or Reset PIN
 
-- Sign in with your existing account, or
-- Reset your PIN if you forgot it.
+On this screen you can **sign in to your existing account** or **reset your PIN** if you’ve forgotten it.
+
+If you already have an account, enter your email and PIN, then press **Sign In**.
+
+If you forgot your PIN – tap **Reset PIN**, enter your email, and you’ll receive a **recovery link**.
 
 <details>
-<summary>Images</summary>
+<summary>📷 Images</summary>
 <p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803530990-screenshot_20251110_001735.png" width="400"/></p>
 <p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803540773-screenshot_20251110_001758.png" width="400"/></p>
 </details>
 
 ---
 
-## Step 3 - Create an Account
+## Step 3 – Create an Account
 
-If you are new, create an account with your email, password, and PIN. The PIN is your primary access code.
+Here you can **create a new account**. Fill in your *email*, *password*, and *PIN code*.
+
+The PIN is your **main access code** — you’ll need it every time you log in. Make sure to remember it!
+
+After filling in all fields, press **Register** to complete setup.
 
 <details>
-<summary>Image</summary>
+<summary>📷 Image</summary>
 <p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803561319-screenshot_20251110_001751.png" width="400"/></p>
 </details>
 
-After registration, verify your email and return to the app to continue. Check Spam folders if the message does not appear.
+After registration, you’ll get a **verification email**. It might land in your **Spam** folder — check there if you don’t see it.
+
+Inside the email is a **verification link** you must click. Once verified, go back to the app and tap **“I verified”** to continue.
+
+⚠️ Note: *Firebase* announced that this verification service might be discontinued in the future, so occasional errors may occur — for now, it works fine.
 
 ---
 
-## Step 4 - Grant Permissions
+## Step 4 – Grant Permissions
 
-Use the online installer or manual ADB commands.
-
-### Option A: Online installer
-
-https://installer.jtechforums.org
-
-Follow the on-screen steps to connect the device and complete enrollment.
-
-### Option B: Manual ADB setup
+You’ll need to grant the app the required permissions. Usually, only **ADB commands** are needed:
 
 ```bash
 adb shell dpm set-device-owner "com.tripleu.mdm/.a"
 adb shell pm grant com.tripleu.mdm android.permission.WRITE_SECURE_SETTINGS
 ```
 
-If the device owner command fails, temporarily disable apps that hold accounts (for example, Google Play Services), run the command, then re-enable them. On Android 14+, a reboot may be required.
+You can also use the online installer: [installer.jtechforums.org](https://installer.jtechforums.org)
+
+If you get an error, you may need to **temporarily disable apps that hold accounts** (like *com.google.android.gms*), run the command, then re-enable them.
+
+On Android 14+, a **device restart** may be required. If you see a warning about Google services after reboot — don’t worry, everything’s fine.
 
 <details>
-<summary>Image</summary>
+<summary>📷 Image</summary>
 <p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803601172-screenshot_20251110_001929.png" width="400"/></p>
 </details>
 
 ---
 
-## Step 5 - Enter the App
+## Step 5 – Enter the App
 
-Use your PIN (not your password) to enter the dashboard.
+After granting permissions, tap **Enter**. You may see the PIN screen again — enter your **PIN code** (not your account password).
 
 <details>
-<summary>Images</summary>
+<summary>📷 Image</summary>
 <p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803630243-screenshot_20251110_002307.png" width="400"/></p>
+</details>
+
+Once logged in, you’ll reach the dashboard — it’s mainly visual, showing **daily facts**, **tips**, and **notices**, but no user action is required.
+
+<details>
+<summary>📷 Image</summary>
 <p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803639576-screenshot_20251110_002136.png" width="400"/></p>
 </details>
 
 ---
 
-## Core Sections
+## Step 6 – Sidebar
 
-### System
+### 🛠️ System
 
-- Block adding new users.
-- Disable factory reset and safe boot.
-- Block developer options and app settings control.
-- Block calls and SMS/MMS.
-- Enable lockout mode for strict focus windows.
+* Block adding new users
+* Disable factory reset (FRP)
+* Block developer options
+* Prevent access to app settings
+* Block phone calls and SMS
 
 <details>
-<summary>Image</summary>
+<summary>📷 Image</summary>
 <p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803675090-screenshot_20251110_002121.png" width="400"/></p>
 </details>
 
-### Installation
+### 📦 Installation
 
-- Block APK installs.
-- Block new apps while allowing updates.
-- Block the Play Store.
-- Allow user updates from the lock screen.
-- Approve or reject apps in the detection console.
+* **Disable APK Install** – blocks new app installs.
+* **Block New Apps** – allows updates but prevents new installs.
+* **Allow User Updates** – gives shortcut to update screen from lockscreen.
+* **Block Play Store** – quickly disables Google Play.
 
 <details>
-<summary>Image</summary>
+<summary>📷 Image</summary>
 <p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803695241-screenshot_20251110_002115.png" width="400"/></p>
 </details>
 
-### Accessibility
+### ♿ Accessibility
 
-- Block WhatsApp Status, Channels, and Updates tabs.
-- Block in-app AI chats.
-- Block in-app browsers with exceptions.
-- Block Gboard GIF and media search.
+* **Android Auto Quirk** – prevents Maps or QuickSearchBox launch but keeps them functional.
+* **Block WhatsApp Tabs** – hides Channels, Status, and Updates tabs.
+* **Block In-App AI** – disables Gemini, Meta AI, and other built-in AIs.
+* **Block In-App Browsers** – detects and prevents embedded browsers.
 
 <details>
-<summary>Image</summary>
+<summary>📷 Image</summary>
 <p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803716929-screenshot_20251110_002107.png" width="400"/></p>
 </details>
 
-### Network
+### 🌐 Network
 
-- Enable Private DNS filtering.
-- Use the firewall VPN to control apps and domains.
-- Whitelist-only browsing when needed.
-- Block Wi-Fi, hotspot, or all traffic.
+* **Block Hotspot** – prevents hotspot/tethering.
+* **Block All Traffic** – cuts all internet access (no updates possible!).
+* **Enable Private DNS** – default: `all.dns.mullvad.net` (blocks social media).
+* **Enable Firewall VPN** – manage offline/online app access.
+* **Whitelist Domains** – allow access only to approved sites.
 
 <details>
-<summary>Image</summary>
+<summary>📷 Image</summary>
 <p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803737884-screenshot_20251110_002057.png" width="400"/></p>
 </details>
 
 ---
 
-## Updates
+## Step 7 – Updates
 
-The Updates screen lets you update apps directly. If an update fails due to signature mismatch, you can mute it and unmute it later in Settings.
+The update screen lets you update apps directly. If an update fails, it’s usually due to signature mismatch (e.g., *APKPure* versions). You can **mute** an app and later unmute it from settings.
 
 <details>
-<summary>Image</summary>
+<summary>📷 Image</summary>
 <p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803919711-screenshot_20251110_002049.png" width="400"/></p>
 </details>
 
 ---
 
-## Apps Tab
+## Step 8 – Apps Tab
 
-Select one or multiple apps and apply policies such as offline mode, in-app browser blocking, or uninstall protection.
+Here you can **select multiple apps**, **apply policies**, **block WebView**, or **set apps offline** via the VPN feature.
 
 <details>
-<summary>Image</summary>
+<summary>📷 Image</summary>
 <p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803955844-screenshot_20251110_002004.png" width="400"/></p>
 </details>
 
 ---
 
-## Settings Tab
+## Step 9 – Settings Tab
 
-- Switch languages and adjust UI density.
-- Import or export profiles.
-- Import a whitelist file.
-- Manage muted updates.
-- Reset PIN, uninstall, or delete account.
+* **Switch to Hebrew** – switch interface language
+* **Import Whitelist** – import a text file of allowed domains
+* **Privacy / Support** – access privacy policy and support
+* **Muted Apps** – manage muted apps
+* **Reset PIN / Uninstall** – reset MDM PIN or uninstall app
 
 <details>
-<summary>Image</summary>
+<summary>📷 Image</summary>
 <p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762804003309-screenshot_20251110_001954.png" width="400"/></p>
 </details>
 
 ---
 
-## Remote Access (Optional)
+## Notes & Support
 
-Remote support sessions can be started from the portal. The user must accept the request before any screen access starts.
+Report bugs on [jtechforums.org](https://jtechforums.org) or get direct help at [tripleu.org](https://tripleu.org).
 
----
+If you want to translate or improve this guide, post your version in the forum thread and tag me.
 
-## Troubleshooting
-
-- If device owner enrollment fails, disable apps that hold accounts, run the command, then re-enable them.
-- If you do not receive the verification email, check Spam or Promotions folders.
-- If an update fails, try muting the app or reinstalling from the official source.
-
----
-
-## Support
-
-- Community support: https://jtechforums.org
-- Main website: https://tripleu.org
+**Enjoy and good luck!**
