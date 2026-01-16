@@ -1,1 +1,1 @@
-Since the app by now is too big to have a guide written by me, whoever wants is welcome to write up a guide with screenshots etc of every feature and every corner of the app. will be rewarding with free 3 month subscription. 
+The app has grown too large for me to maintain a comprehensive guide on my own. If you would like to write a full guide (with screenshots covering every feature and section), you are welcome to contribute. Authors will receive a free 3‑month subscription.
