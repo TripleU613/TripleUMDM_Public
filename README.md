@@ -1,184 +1,265 @@
-# TripleU MDM v3.7 → v3.8
+# TripleU MDM 4.0
 
-[**▶ Install Online**](https://installer.jtechforums.org) • [**Latest Guide**](#-user-guide-v38) • [**Issues**](https://jtechforums.org) • [**Website**](https://tripleu.org)
+[Install Online](https://installer.jtechforums.org) | [User Guide](./Guide.md) | [Website](https://tripleu.org) | [Privacy](./Privacy.md) | [Support](https://jtechforums.org)
 
-> **TL;DR**: v3.8 is faster, stricter, fully translated (Hebrew toggle), with Safe Mode protection, refined WhatsApp controls, and a Compose UI overhaul.
+TripleU MDM is a community-built Android management platform for focused, secure devices. It combines device policies, app controls, network filtering, and remote management in one place.
 
-**TripleU MDM** is a simple, powerful, all-in-one Mobile Device Management (MDM) solution designed to give our community safe, secure, and responsible technology.
-
----
-
-## 🚀 What’s New in v3.8
-
-<details>
-<summary><b>Changelog (tap to expand)</b></summary>
-
-* Added Safe Mode protection
-* Added root self-grant support
-* Removed unnecessary permission prompts
-* Fully translated app (includes Hebrew switch)
-* Added call blocking and video blocking
-* Fixed crashes after enabling restrictions
-* Fixed Google sign-in blocked by WebView filter
-* Fixed and refined WhatsApp Channels/Status blocking
-* Added version codename in Settings
-* Allowed longer PINs (no 8-digit limit)
-* Added whitelist domains GUI
-* Added daily “Fact of the Day”
-* Updated Google APIs for locked-out users
-* Rebuilt UI using Jetpack Compose
-* Many performance and stability fixes
-
-</details>
-
-*Stable, cleaner, and more powerful than ever.*
+This repository is the public release hub for the Android app and its documentation.
 
 ---
 
-## ✨ Features
+## At a Glance
 
-* **App Control**
-
-  * Make specific apps *offline* or *online*.
-  * Block in-app browsers.
-  * Disable, hide, suspend, or block app uninstallation.
-
-* **Network & Ads**
-
-  * Block all ads and social media sites via **Private DNS**.
-  * Upload a **URL whitelist** so that only approved sites are accessible.
-  * Option to take the *entire device offline*.
-
-* **System Restrictions**
-
-  * Block app installation, hotspot & tethering.
-  * Disable developer options, factory reset with FRP, user additions.
-  * Block SMS/MMS.
-
-* **Accessibility Controls**
-
-  * Block in-app AI chats.
-  * Restrict WhatsApp status and channels.
-  * Block GIFs and media search in Gboard.
-  * Disable launching Google Maps and the Google app.
-
-* **Recovery & Support**
-
-  * Forgotten PIN? Receive an email recovery link.
-  * For those who no longer need filtering, remote uninstallation is available (small fee applies).
-  * Remote updates: bug fixes and improvements are pushed directly, no manual work required.
-
-* **Free for the Community**
-
-  * 100% free to install and use.
-  * Donations welcome to help support ongoing development.
+- Full Android device management with strict policy enforcement.
+- App approvals and per-app controls including offline mode and uninstall protection.
+- Network filtering with Private DNS, firewall VPN, and domain allowlists.
+- Accessibility protections for WhatsApp, AI chat, in-app browsers, and more.
+- Built-in updater with update-all, mute updates, and background checks.
+- Optional web portal with remote management and screen support.
 
 ---
 
-## 🛡️ Privacy & Security
+## 4.0 Highlights
 
-* We **do not collect personal data**.
-* Minimal technical info (device model, Android version, serial number) is collected *only* for troubleshooting.
-* This app is strictly for **private use**. Do not reverse-engineer, redistribute, or use it commercially.
-
-Abuse prevention: if our systems detect suspicious activity (too many duplicate emails, numbers, PINs, or similar patterns), remote uninstall and ban may be triggered automatically.
-
----
-
-## ⚠️ Disclaimer
-
-* We are **not responsible** for bricked devices, factory resets during FRP, or situations where you enabled "all network block" and then tried to remote-uninstall.
-* Please use responsibly and at your own risk.
+- Expanded policy coverage across system, installation, network, accessibility, and apps.
+- Fine-grained app control: hide, suspend, disable, offline, and block in-app browsers.
+- Premium VPN option with category filtering, image filtering, and word detection.
+- Remote access with explicit user approval to protect privacy.
+- Profile export/import and whitelist import for fast setup.
+- English and Hebrew interface with adjustable UI density.
 
 ---
 
-## 🚀 Installation
+## Who It Is For
 
-1. Install the app on your device.
-2. Run the following ADB commands:
-
-   ```bash
-   adb shell dpm set-device-owner "com.tripleu.mdm/.a"
-   adb shell pm grant com.tripleu.mdm android.permission.WRITE_SECURE_SETTINGS
-   ```
-3. Or use our [automatic installer](https://installer.jtechforums.org) directly from your computer browser.
+- Families and communities who want consistent, safe devices.
+- Schools and organizations that need centralized control.
+- Individuals who want a distraction-free phone that stays locked down.
 
 ---
 
-## 📘 User Guide (v3.8)
+## Feature Map
 
-Everything you need to set up and manage TripleU MDM:
+### Device and System Controls
 
-<details>
-<summary><b>Open the step‑by‑step guide</b></summary>
+- Block adding new users.
+- Disable factory reset and safe-boot routes.
+- Block developer options.
+- Block access to app settings controls.
+- Block phone calls and SMS/MMS.
+- Lockout mode for strict focus windows.
 
-### Step 1 – Welcome
+### Installation and App Approvals
 
-When opening **TripleU MDM** for the first time, agree to the *Terms of Use*.
+- Block APK installs.
+- Block new app installs while allowing updates.
+- Block the Play Store with one switch.
+- App detection console for pending installs and approvals.
+- Allow user updates from the lock screen when needed.
 
-<details><summary>📷 Image</summary><p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803482593-step-one.png" width="400"/></p></details>
+### App Controls
 
-### Step 2 – Sign In or Reset PIN
+- Hide, suspend, or disable apps.
+- Block uninstall for managed apps.
+- Make apps offline using the firewall VPN.
+- Block in-app browsers per app or across the device.
+- Add WebView exceptions for trusted apps.
+- Block video in supported apps.
 
-Sign in with your existing account or reset your PIN if forgotten.
+### Network and Web Filtering
 
-<details><summary>📷 Images</summary><p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803530990-screenshot_20251110_001735.png" width="400"/></p><p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803540773-screenshot_20251110_001758.png" width="400"/></p></details>
+- Private DNS toggle for system-wide filtering.
+- Firewall VPN for per-app network control.
+- Domain whitelist mode for strict, approved-only browsing.
+- Domain blacklist mode for targeted blocking.
+- Block all traffic mode for full offline lockdown.
+- Block Wi-Fi and hotspot/tethering.
 
-### Step 3 – Create an Account
+### Accessibility Protections
 
-Fill in your *email*, *password*, and *PIN code* (used for login). Check your email for a verification link.
+- Block WhatsApp Status, Channels, and Updates tabs.
+- Block in-app AI chats (Gemini, Meta AI, and similar).
+- Block in-app browsers globally with an exception list.
+- Block Gboard GIF and media search features.
+- Prevent quick-launch routes in Google Search and Maps from bypassing rules.
 
-<details><summary>📷 Image</summary><p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803561319-screenshot_20251110_001751.png" width="400"/></p></details>
+### Updates and Maintenance
 
-### Step 4 – Grant Permissions
+- Built-in app updater with update-all support.
+- Mute specific apps so they never appear in the updater list.
+- Background update checks and update notifications.
+- Critical fixes can be delivered remotely when needed.
 
-Grant permissions with **ADB** or use the online installer.
+### Settings and Recovery
+
+- Switch interface language between English and Hebrew.
+- Import or export a full profile to reuse policies.
+- Import a domain whitelist from a file.
+- Account info, privacy policy, and support links inside the app.
+- App density control for compact or comfortable layouts.
+- PIN reset and account deletion tools.
+
+### Remote Management and Support
+
+- Remote commands: sync, lock, wipe, or uninstall.
+- Remote support with screen sharing and remote input.
+- Device status, last seen, and policy summaries in the portal.
+- Device notes for quick context.
+
+---
+
+## VPN and Filtering Options
+
+TripleU offers three filtering paths depending on your needs:
+
+| Option | Summary |
+| --- | --- |
+| Per-app offline (free) | Take selected apps offline without impacting the rest of the device. |
+| Local whitelist (free) | Allow only approved sites when the firewall VPN is active. |
+| Premium VPN (paid) | Category filtering, ad and tracker blocking, image filtering, and word detection. |
+
+Premium VPN is optional and requires a subscription.
+
+---
+
+## Supported Apps for Advanced Filtering
+
+TripleU continuously expands coverage. Current supported apps include:
+
+- Moovit
+- Waze
+- WhatsApp
+- Gmail
+- Gboard
+- Spotify
+- Google Maps
+- Chrome (full filtering)
+
+---
+
+## Pricing at a Glance
+
+- First device is free.
+- Add a second device for a one-time $10 fee.
+- Premium VPN is $15 per 3 months.
+
+---
+
+## Admin Portal (Optional)
+
+The web portal provides centralized control across devices:
+
+- Manage multiple devices from one dashboard.
+- Approve apps and apply policies remotely.
+- Start and stop remote support sessions.
+- View device health and policy summaries.
+
+---
+
+## Installation
+
+### Option 1: Online Installer
+
+Use the browser-based installer:
+
+https://installer.jtechforums.org
+
+### Option 2: Manual ADB Setup
+
+Install the APK, then run:
 
 ```bash
 adb shell dpm set-device-owner "com.tripleu.mdm/.a"
 adb shell pm grant com.tripleu.mdm android.permission.WRITE_SECURE_SETTINGS
 ```
 
-<details><summary>📷 Image</summary><p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803601172-screenshot_20251110_001929.png" width="400"/></p></details>
-
-### Step 5 – Enter the App
-
-Enter your **PIN** (not password) and access the dashboard with daily facts and tips.
-
-<details><summary>📷 Image</summary><p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803639576-screenshot_20251110_002136.png" width="400"/></p></details>
-
-### Step 6 – Sidebar Overview
-
-Control system, installation, accessibility, and network features.
-
-<details><summary>📷 Image</summary><p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803675090-screenshot_20251110_002121.png" width="400"/></p></details>
-
-### Step 7 – Updates
-
-Manage app updates directly; mute problematic apps if needed.
-
-<details><summary>📷 Image</summary><p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803919711-screenshot_20251110_002049.png" width="400"/></p></details>
-
-### Step 8 – Apps Tab
-
-Select multiple apps, apply policies, block WebView, or set apps offline.
-
-<details><summary>📷 Image</summary><p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762803955844-screenshot_20251110_002004.png" width="400"/></p></details>
-
-### Step 9 – Settings Tab
-
-Switch language, import whitelists, manage muted apps, reset PIN, or uninstall.
-
-<details><summary>📷 Image</summary><p align="center"><img src="https://mitmachim.top/assets/uploads/files/1762804003309-screenshot_20251110_001954.png" width="400"/></p></details>
-
-</details>
+If the device owner command fails, temporarily disable apps that hold accounts (for example, Google Play Services), run the command, then re-enable them.
 
 ---
 
-## Notes & Support
+## First-Time Setup
 
-Report bugs on [jtechforums.org](https://jtechforums.org) or get direct help at [tripleu.org](https://tripleu.org).
+1. Open the app and accept the Terms of Use.
+2. Sign in or create an account.
+3. Verify your email and return to the app.
+4. Grant device owner permissions.
+5. Enter the app using your PIN.
 
-If you want to translate or improve this guide, post your version in the forum thread and tag me.
+---
 
-**Enjoy and good luck!**
+## Daily Use Guide
+
+### Home
+
+- Overview of active policies.
+- Device status, last seen, and quick summaries.
+- Daily tips and notices.
+
+### System
+
+- Core restrictions like factory reset, developer options, calls, and SMS.
+- Lockout mode for strict focus times.
+
+### Installation
+
+- Control how new apps are installed.
+- Approve or reject pending apps.
+- Keep updates available without allowing installs.
+
+### Network
+
+- Private DNS and firewall VPN controls.
+- Whitelist-only browsing modes.
+- Block Wi-Fi, hotspot, or all traffic.
+
+### Accessibility
+
+- Block unwanted UI paths inside apps.
+- WhatsApp and AI restrictions.
+- In-app browser controls.
+
+### Apps
+
+- Apply app policies in bulk.
+- Mark apps as offline or block uninstall.
+- Block video or in-app browsers where needed.
+
+### Updates
+
+- Update apps in one place.
+- Mute problematic updates.
+- Keep the device stable and predictable.
+
+### Settings
+
+- Switch languages, import/export profiles, and manage muted updates.
+- Reset PIN, uninstall, or delete account.
+
+---
+
+## Updates
+
+TripleU MDM checks for updates in the background and can prompt you when a new build is available. Managed devices can also be updated silently when possible.
+
+---
+
+## Privacy and Data
+
+- We do not sell data.
+- Minimal technical data is used only for support and device management.
+- The app is for private, community use. Do not redistribute or repackage it.
+
+See the full policy here: [Privacy](./Privacy.md)
+
+---
+
+## Support
+
+- Community support: https://jtechforums.org
+- Main website: https://tripleu.org
+
+---
+
+## Disclaimer
+
+Use at your own risk. Device owner tools are powerful, and misconfiguration can lock you out or block connectivity. Make sure you understand each restriction before enabling it.
