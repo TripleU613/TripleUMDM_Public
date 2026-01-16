@@ -6,7 +6,7 @@ Install with the website installer:
 https://mdm.tripleu.org
 
 Access your MDM dashboard (console):
-https://mdm.tripleu.org
+https://mdm.tripleu.org/login
 
 Comments and feedback:
 https://forums.jtechforums.org/t/regarding-upcoming-tripleumdm-v4-0/5535?u=tripleu
@@ -15,10 +15,10 @@ Questions for the Israeli community:
 https://mitmachim.top/topic/87888
 
 Technical support:
-https://tripleu.org
+https://tripleu.org (contact)
 
 Donations:
-https://tripleu.org
+https://tripleu.org (multiple payment methods)
 
 Want to write a guide or improve the docs? Open a PR to this repo.
 Issues: https://github.com/TripleU613/TripleUMDM_Public/issues (or mention them on either forum).
