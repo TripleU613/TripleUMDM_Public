@@ -9,16 +9,15 @@ This repository contains the **public release** of TripleU MDM, including instal
 
 ## Links
 
-- **Installer (web):** https://mdm.tripleu.org  
-- **Dashboard / console:** https://mdm.tripleu.org/login  
+- **Installer (web):** https://tripleumdm.com  
+- **Dashboard / console:** https://tripleumdm.com 
 - **Feedback thread (JTech Forums):** https://forums.jtechforums.org/t/regarding-upcoming-tripleumdm-v4-0/5535?u=tripleu  
 - **Israeli community Q&A (Mitmachim):** https://mitmachim.top/topic/87888  
-- **Support / contact:** https://tripleu.org  
-- **Donations:** https://tripleu.org  
+- **Support / contact:** https://tripleumdm.com or tripleu.org
+- **Donations:** https://tripleu.org
+- **Docs:** https://docs.tripleumdm.com
 
 ## Contributing / feedback
-
-Documentation improvements and guides are welcome — feel free to open a PR.
 
 For bugs and feature requests, use GitHub Issues:  
 https://github.com/TripleU613/TripleUMDM_Public/issues  
