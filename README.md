@@ -19,6 +19,11 @@ Use the automatic installer:
 
 **https://tripleumdm.com/install**
 
+## Links
+
+- **Online dashboard:** https://tripleumdm.com
+- **Docs (outdated):** https://docs.tripleumdm.com
+
 ## Contact
 
 - **Email:** tripleutech@gmail.com
