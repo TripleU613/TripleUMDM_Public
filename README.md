@@ -32,4 +32,4 @@ Use the automatic installer:
 
 ## Notes
 
-This public repository is intentionally minimal. Docs, donations, Israeli support links, privacy docs, manual install instructions, and extra public files have been removed. For all questions regarding those, head to jtechforums.org.
+This repository is intentionally minimal. For updates, questions, and community discussion, visit jtechforums.org.
