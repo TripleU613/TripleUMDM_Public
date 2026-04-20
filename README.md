@@ -32,4 +32,4 @@ Use the automatic installer:
 
 ## Notes
 
-This repository is intentionally minimal. For updates, questions, and community discussion, visit jtechforums.org.
+This repository is intentionally minimal. For updates, questions, and community discussion, visit [jtechforum.org](https://jtechforum.org).
